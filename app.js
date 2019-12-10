@@ -58,6 +58,8 @@ volumeSlider.oninput = (e) => {
 // PROGRESSBAR
 const updateProgress = () => {
     const progressBar = document.querySelector('#progress')
-
-    progressBar.value = (player.currentTime / player.duration) * 100
+    if(player.currentTime > 0) {
+        
+        progressBar.value = (player.currentTime / player.duration) * 100
+    }
 }
